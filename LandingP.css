@@ -1,0 +1,266 @@
+body {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1.1rem;
+  }
+  #services .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* HEADER BACKGROUND */
+header {
+  position: relative;
+  background: url('pexels-leonardho-1552252.jpg') no-repeat center center/cover;
+  color: rgba(243, 0, 0, 0.9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  font-style: italic;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* NAVIGATION BAR */
+#nav {
+  position: fixed;
+  background:rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10; /* keeps nav above overlay */
+}
+
+#nav a.active {
+  color: rgba(243, 0, 0, 0.9);
+  text-decoration: underline;
+}
+
+#nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+#nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+#nav a:hover {
+  color: rgba(243, 0, 0, 0.8);
+  text-decoration: underline;
+}
+
+/* HERO TEXT */
+.header-content {
+  position: relative;
+  z-index: 2; /* places text above overlay */
+  max-width: 800px;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  margin-bottom: 20px;
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  color: white;
+}
+
+
+#about {
+    min-height: 100vh;
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+
+    background: url(pexels-goumbik-669584.jpg) no-repeat center center/cover;
+    color: black;
+    position: relative;
+    font-size: xx-large;
+}
+
+#services {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: rgb(134, 134, 134);
+    font-style: italic;
+}
+
+#services h2 {
+    font-size: 45px;
+    text-decoration: underline;
+    margin-bottom: 40px;
+    font-family:fantasy;
+}
+
+#services .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#services .card-title {
+    text-decoration: underline;
+    font-family:fantasy;
+    font-weight:lighter;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+#review {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: rgb(3, 0, 0);
+}
+
+#review h2 {
+    font-size: 45px;
+    font-family:fantasy;
+    font-style: italic;
+    color: rgb(117, 12, 12);
+}
+
+#review .review-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+#contact {
+  min-height: 60vh;
+  background-color: rgb(134, 134, 134);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+#contact h2 {
+  font-size: 45px;
+  text-decoration: underline;
+  font-family:fantasy;
+  margin-bottom: 30px;
+}
+
+#contact .contact-container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  max-width: 400px;
+}
+
+#contact address {
+  font-style: normal; /* overrides default italic */
+  line-height: 1.8;
+}
+
+#contact a {
+  color: black;
+  text-decoration: underline;
+}
+
+#contact a:hover {
+  color: #941f1f;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-brand {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: rgb(200, 200, 200);
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 10px;
+}
+
